@@ -1,0 +1,119 @@
+1)Build a class Student which contains details about the Student and compile and run its  
+instance.
+
+// Define the Student class
+class Student {
+    // Instance variables
+    String name;
+    int age;
+    char grade;
+
+    // Constructor to initialize the Student object
+    public Student(String name, int age, char grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+
+    // Method to display student details
+    public void displayDetails() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Age: " + age);
+        System.out.println("Student Grade: " + grade);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the Student class
+        Student student1 = new Student("John Doe", 18, 'A');
+
+        // Display the details of the student
+        student1.displayDetails();
+    }
+}
+
+
+
+
+2)Write a Vehicle class with overloaded methods that have a different number of parameters. 
+Demonstrate calling these overloaded methods with various numbers of arguments.  
+
+class Vehicle {
+    // Overloaded drive method with different parameters
+    public void drive() {
+        System.out.println("Vehicle is being driven.");
+    }
+
+    public void drive(int speed) {
+        System.out.println("Vehicle is being driven at speed: " + speed + " km/h");
+    }
+
+    // Overloaded park method with different parameters
+    public void park() {
+        System.out.println("Vehicle is parked.");
+    }
+
+    public void park(String location) {
+        System.out.println("Vehicle is parked at " + location);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the Vehicle class
+        Vehicle car = new Vehicle();
+
+        // Call the drive method with different numbers of arguments
+        car.drive();            // Calls drive() with no arguments
+        car.drive(60);          // Calls drive(int speed) with one argument
+
+        // Call the park method with different numbers of arguments
+        car.park();             // Calls park() with no arguments
+        car.park("Parking Lot"); // Calls park(String location) with one argument
+    }
+}
+
+
+3)Create a class Employee with multiple overloaded methods that have different parameter types (e.g., 
+int, double, String). Demonstrate calling each overloaded method with appropriate arguments
+
+
+class Employee {
+    // Overloaded method to calculate salary based on hourly wage and hours worked
+    public double calculateSalary(int hourlyWage, int hoursWorked) {
+        return hourlyWage * hoursWorked;
+    }
+
+    // Overloaded method to calculate salary based on monthly salary
+    public double calculateSalary(double monthlySalary) {
+        return monthlySalary;
+    }
+
+    // Overloaded method to print employee details
+    public void printDetails(String name, int age) {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    // Overloaded method to print employee details with department
+    public void printDetails(String name, String department) {
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the Employee class
+        Employee emp = new Employee();
+
+        // Call the overloaded calculateSalary methods with appropriate arguments
+        System.out.println("Salary based on hourly wage and hours worked: $" + emp.calculateSalary(25, 40));
+        System.out.println("Salary based on monthly salary: $" + emp.calculateSalary(5000.00));
+
+        // Call the overloaded printDetails methods with appropriate arguments
+        emp.printDetails("John Doe", 30);
+        emp.printDetails("Jane Smith", "Engineering");
+    }
+}

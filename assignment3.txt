@@ -1,0 +1,79 @@
+1)Write a program that demonstrates widening conversion from int to double and prints the result.
+
+public class WideningConversionExample {
+    public static void main(String[] args) {
+        int intValue = 42;
+
+        double doubleValue = intValue;
+
+        System.out.println("Original int value: " + intValue);
+        System.out.println("Converted double value: " + doubleValue);
+    }
+}
+
+
+2)Create a program that demonstrates narrowing conversion from double to int and prints the result.
+
+public class NarrowingConversionExample {
+    public static void main(String[] args) {
+        // Declare and initialize a double variable
+        double doubleValue = 3.14;
+
+        // Perform narrowing conversion from double to int
+        int intValue = (int) doubleValue;
+
+        // Print the original double value and the converted int value
+        System.out.println("Original double value: " + doubleValue);
+        System.out.println("Converted int value: " + intValue);
+    }
+}
+
+
+3)Write a program that performs arithmetic operations involving different data types (int, double, float) 
+and observes how Java handles widening conversions automatically.  
+
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        // Declare and initialize variables of different data types
+        int intValue = 10;
+        double doubleValue = 5.5;
+        float floatValue = 2.5f;
+
+        // Addition operation involving int and double
+        double result1 = intValue + doubleValue;
+        System.out.println("Result of int + double: " + result1);
+
+        // Addition operation involving int and float
+        float result2 = intValue + floatValue;
+        System.out.println("Result of int + float: " + result2);
+
+        // Multiplication operation involving double and float
+        double result3 = doubleValue * floatValue;
+        System.out.println("Result of double * float: " + result3);
+    }
+}
+
+
+
+4)Write a Program that demonstrates widening conversion from int to (double,float, boolean, string)  and 
+prints the result.
+
+public class WideningConversionDemo {
+    public static void main(String[] args) {
+        int intValue = 42;
+
+        double doubleValue = intValue;
+        System.out.println("Widening conversion to double: " + doubleValue);
+
+        
+        float floatValue = intValue;
+        System.out.println("Widening conversion to float: " + floatValue);
+
+        
+        System.out.println("Widening conversion to boolean: " + booleanValue);
+
+        String stringValue = Integer.toString(intValue);
+        System.out.println("Widening conversion to String: " + stringValue);
+    }
+}
